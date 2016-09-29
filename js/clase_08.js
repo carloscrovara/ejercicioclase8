@@ -263,19 +263,20 @@ var Diario = (function () {
 
     var comparadorId = function (a, b) {
 
+        if (a.id < b.id) {
+            
+            return -1;
+        
+        }
+        
+        if (a.id === b.id) {
+            
+            return 0;
+        }
+
         if (a.id > b.id) {
             
             return 1;
-        }
-
-        else if (a.id < b.id) {
-            
-            return -1;
-        }
-
-        else {
-            
-            return 0;
         }
 
     }
@@ -288,20 +289,20 @@ var Diario = (function () {
 
     var comparadorAz = function (a, b) {
 
+        if (a.titulo < b.titulo) {
+            
+            return -1;
+        
+        }
+        
+        if (a.titulo === b.titulo) {
+            
+            return 0;
+        }
+
         if (a.titulo > b.titulo) {
             
             return 1;
-        
-        }
-        
-        else if (a.titulo < b.titulo) {
-            
-            return -1;
-        }
-
-        else {
-            
-            return 0;
         }
 
     }
