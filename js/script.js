@@ -241,7 +241,20 @@ var Diario = (function () {
 
 	}
 
-	// EJERCICIO
+    // Se genera la funcion para borrar peliculas del DOM que se usará en las funciones ordenar por ID, AZ y ZA
+    var borrarNoticiasDOM = function () {
+
+        var noticiasDOM = document.getElementById("noticias");
+    
+        while (noticiasDOM.firstChild) {
+
+            noticiasDOM.removeChild(noticiasDOM.firstChild);
+
+        }
+
+    }
+	
+    // EJERCICIO
 	// Vincular los elementos con id ordenamiento_id, ordenamiento_az, ordenamiento_za
 	// a 3 funciones que usaremos para ordenar
 	var vincularOrdenamientos = function () {
@@ -285,6 +298,12 @@ var Diario = (function () {
 
         noticias.sort(comparadorId);
 
+        borrarNoticiasDOM();
+
+        guardarNoticias();
+
+        precargarNoticias();          
+
     }
 
     var comparadorAz = function (a, b) {
@@ -311,6 +330,12 @@ var Diario = (function () {
 
         noticias.sort(comparadorAz);
 
+        borrarNoticiasDOM();
+
+        guardarNoticias();
+
+        precargarNoticias();           
+
     }    
 
     var comparadorZa = function (a, b) {
@@ -334,6 +359,12 @@ var Diario = (function () {
     var ordenarZa = function () {
 
         noticias.sort(comparadorZa);
+
+        borrarNoticiasDOM();
+
+        guardarNoticias();
+
+        precargarNoticias();   
 
     }       
 
