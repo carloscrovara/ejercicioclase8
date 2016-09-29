@@ -235,7 +235,7 @@ var Diario = (function () {
         
         var elemImagen = document.getElementById("imagen"); 
         
-        var noticia = new Noticia(generarNuevoId, elemTitulo.value, elemDescripcion.value, elemImagen.value);
+        var noticia = new Noticia(generarNuevoId(), elemTitulo.value, elemDescripcion.value, elemImagen.value);
         
         agregarNoticia(noticia);
 
